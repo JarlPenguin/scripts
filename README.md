@@ -12,4 +12,4 @@ TWRP-9.0.sh - Build script for TWRP (included with OmniROM 9.0) (experimental)
 
 TWRP-Treble.sh - Build script for TWRP (Project Treble) (included with OmniROM 7.1) (experimental)
 
-Replace <directory> with the directory your ROM is synced to.
+Replace `<directory>` with the directory your ROM is synced to.
