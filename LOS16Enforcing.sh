@@ -7,7 +7,6 @@ repo sync -c -f --force-sync --no-tag --no-clone-bundle -j$(nproc --all) --optim
 echo -e "\e[36mBuilding...\e[0m"
 . build/envsetup.sh
 export SELINUX_IGNORE_NEVERALLOWS=true
-lunch
-lineage_montana-userdebug
+lunch lineage_montana-userdebug
 mka bacon
 echo -e "\e[36mBuild process ended! Check the terminal for any errors.\e[0m"
