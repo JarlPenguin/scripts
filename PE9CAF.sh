@@ -6,6 +6,8 @@ cd ~/Documents/PixelExperience9CAF
 echo -e "\e[36mSyncing from source...\e[0m"
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 echo -e "\e[36mBuilding...\e[0m"
+export CCACHE_COMPRESS=1
+export USE_CCACHE=1
 . build/envsetup.sh
 lunch aosp_montana-userdebug
 mka bacon -j$(nproc --all)
