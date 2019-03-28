@@ -22,5 +22,5 @@ lunch omni_montana-eng
 # Clean build directory
 make clean && make clobber
 # Start the build
-make recoveryimage
+make recoveryimage -j$(nproc --all)
 echo -e "\e[36mBuild process ended! Check the terminal for any errors.\e[0m"
