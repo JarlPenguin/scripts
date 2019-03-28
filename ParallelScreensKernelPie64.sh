@@ -24,6 +24,8 @@ make O=out montana_defconfig
 make O=out -j$(nproc --all)
 # Go to AnyKernel2 directory (clone from here: https://github.com/jarlpenguin/ParallelScreensKernel/tree/pie)
 cd <anykernel2 directory>
+# Switch to Pie branch
+git checkout pie
 # Remove existing kernel(s)
 rm -rf ./Image.gz
 # Copy kernel from out

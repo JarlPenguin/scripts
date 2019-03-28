@@ -19,6 +19,8 @@ make O=out montana_defconfig
 make O=out -j$(nproc --all)
 # Go to AnyKernel2 directory (clone from here: https://github.com/jarlpenguin/ParallelScreensKernel/tree/oreo-stock)
 cd <anykernel2 directory>
+# Switch to Stock Oreo branch
+git checkout oreo-stock
 # Remove existing kernel(s)
 rm -rf ./Image.gz
 # Copy kernel from out
