@@ -2,6 +2,7 @@
 echo -e "\e[36mScript to automate ParallelScreens Kernel (Oreo ARM64) builds for Moto G5S (montana)"
 echo -e "Initializing...\e[0m"
 # Go to toolchain
+cd <location of toolchain>
 # Export needed variables
 export CROSS_COMPILE=$(pwd)/bin/aarch64-linux-android-
 export ARCH=arm64 && export SUBARCH=arm64
