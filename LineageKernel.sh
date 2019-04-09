@@ -1,5 +1,5 @@
 #!/bin/sh
-echo -e "\e[36mScript to automate ParallelScreens Kernel (Pie ARM64) builds for Moto G5S (montana)"
+echo -e "\e[36mScript to automate Lineage Kernel (Pie ARM64) builds for Moto G5S (montana)"
 echo -e "Initializing...\e[0m"
 # Go to toolchain
 cd <location of toolchain>
@@ -11,7 +11,7 @@ cd <location of kernel>
 echo -e "\e[36mSyncing from source...\e[0m"
 # Pull from source
 git pull
-git checkout lineage-16.0
+git checkout <branch>
 git pull
 echo -e "\e[36mBuilding...\e[0m"
 # Clean build directory
