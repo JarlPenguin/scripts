@@ -22,7 +22,7 @@ make O=out mrproper
 make O=out montana_defconfig
 # Compile the kernel
 make O=out -j$(nproc --all)
-# Go to AnyKernel2 directory (clone from here: https://github.com/jarlpenguin/ParallelScreensKernel/tree/pie)
+# Go to AnyKernel2 directory (clone from here: https://github.com/jarlpenguin/AnyKernel2Template)
 cd <anykernel2 directory>
 # Switch to Pie branch
 git checkout pie
@@ -31,5 +31,5 @@ rm -rf ./Image.gz
 # Copy kernel from out
 cp <location of kernel>/out/arch/arm64/boot/Image.gz <anykernel2 directory>
 # Zip kernel up
-zip -r9 ParallelScreens.zip * -x README.md ParallelScreens.zip
+zip -r9 LineageKernel.zip
 echo -e "\e[36mBuild process ended! Check the terminal for any errors.\e[0m"

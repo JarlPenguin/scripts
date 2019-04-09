@@ -11,7 +11,7 @@ echo -e "\e[36mBuilding...\e[0m"
 # Use CCACHE
 export CCACHE_COMPRESS=1
 export USE_CCACHE=1
-# Export builder (flex)
+# Export builder type (flex)
 export LC_ALL=C
 # Allow missing dependencies
 export ALLOW_MISSING_DEPENDENCIES=true
