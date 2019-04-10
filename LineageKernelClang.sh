@@ -1,11 +1,6 @@
 #!/bin/sh
-echo -e "\e[36mScript to automate Lineage Kernel builds for Moto G5S (montana)"
+echo -e "\e[36mScript to automate Lineage Kernel (built with Clang) builds for Moto G5S (montana)"
 echo -e "Initializing...\e[0m"
-# Go to toolchain
-cd <location of toolchain>
-# Export needed variables
-export CROSS_COMPILE=$(pwd)/bin/aarch64-linux-android-
-export ARCH=arm64 && export SUBARCH=arm64
 # Go to kernel directory
 cd <location of kernel>
 echo -e "\e[36mSyncing from source...\e[0m"
@@ -13,15 +8,19 @@ echo -e "\e[36mSyncing from source...\e[0m"
 git pull
 git checkout <branch>
 git pull
-echo -e "\e[36mBuilding...\e[0m"
+# Export needed variables
+make O=out ARCH=arm64 montana_defconfig
 # Clean build directory
 make O=out clean
 # Make build directory proper
 make O=out mrproper
-# Write montana defconfig to .config
-make O=out montana_defconfig
-# Compile the kernel
-make O=out -j$(nproc --all)
+echo -e "\e[36mBuilding...\e[0m"
+PATH="~/<path to clang toolchain>/bin:~/<path to gcc toolchain>/bin:${PATH}" \
+make -j$(nproc --all) O=out \
+                      ARCH=arm64 \
+                      CC=clang \
+                      CLANG_TRIPLE=aarch64-linux-gnu- \
+                      CROSS_COMPILE=aarch64-linux-android-
 # Go to AnyKernel2 directory (clone from here: https://github.com/jarlpenguin/AnyKernel2Template)
 cd <anykernel2 directory>
 # Remove existing kernel(s)

@@ -4,9 +4,9 @@ LOS15.1.sh - Build script for LineageOS 15.1
 
 LOS16.sh - Build script for LineageOS 16.0
 
-LineageKernelStock.sh - Build script for Lineage Kernel (for Oreo Stock)
+LineageKernel.sh - Build script for Lineage Kernel with GCC
 
-LineageKernel.sh - Build script for Lineage Kernel
+LineageKernelClang.sh - Build script for Lineage Kernel with Clang
 
 PE9CAF.sh - Build script for Pixel Experience 9.0 (CAF) (experimental)
 
