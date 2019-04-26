@@ -11,6 +11,7 @@ echo -e "\e[36mBuilding...\e[0m"
 # Use CCACHE
 export CCACHE_COMPRESS=1
 export USE_CCACHE=1
+# Replace x with amount of GB for CACCHE                          #export CCACHE_MAXSIZE=xG
 # Setup build environment
 . build/envsetup.sh
 # Start the build

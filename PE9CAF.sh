@@ -11,10 +11,12 @@ echo -e "\e[36mBuilding...\e[0m"
 # Use CCACHE
 export CCACHE_COMPRESS=1
 export USE_CCACHE=1
+# Replace x with amount of GB for CACCHE
+#export CCACHE_MAXSIZE=xG
 # Setup build environment
 . build/envsetup.sh
 # Lunch the device
 lunch aosp_montana-userdebug
 # Start the build
-mka bacon -j$(nproc --all)
+mka bacon
 echo -e "\e[36mBuild process ended! Check the terminal for any errors.\e[0m"
