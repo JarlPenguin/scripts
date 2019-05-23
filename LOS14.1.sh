@@ -1,9 +1,9 @@
 #!/bin/sh
-echo -e "\e[36mScript to automate LineageOS 15.1 builds for Moto G5S (montana)"
+echo -e "\e[36mScript to automate LineageOS 14.1 builds for Moto G5S (montana)"
 echo -e "Initializing...\e[0m"
 # Add repo to PATH
 PATH=~/bin:$PATH
-cd ~/los15.1
+cd ~/los14.1
 echo -e "\e[36mSyncing from source...\e[0m"
 # Optimized sync
 repo sync -c -f --force-sync --no-tags --no-clone-bundle -j$(nproc --all)
@@ -25,7 +25,7 @@ croot
 ./build/tools/releasetools/ota_from_target_files -k ~/.android-certs/releasekey \
     --block --backup=true \
     signed-target_files.zip \
-    lineage-15.1-$date-UNOFFICIAL-montana-signed.zip
+    lineage-14.1-$date-UNOFFICIAL-montana-signed.zip
 echo -e "\e[36mBuild process ended! Check the terminal for any errors.\e[0m"
 echo -e "\e[36mUploading...\e[0m"
-gdrive upload lineage-15.1-$date-UNOFFICIAL-montana-signed.zip
+gdrive upload lineage-14.1-$date-UNOFFICIAL-montana-signed.zip

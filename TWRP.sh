@@ -1,12 +1,12 @@
 #!/bin/sh
-echo -e "\e[36mScript to automate TWRP (7.1) Recovery builds for Moto G5S (montana)"
+echo -e "\e[36mScript to automate TeamWin Recovery Project builds for Moto G5S (montana)"
 echo -e "Initializing...\e[0m"
 # Add repo to PATH
 PATH=~/bin:$PATH
-cd <directory>
+cd ~/twrp
 echo -e "\e[36mSyncing from source...\e[0m"
 # Optimized sync
-repo sync -c -f --force-sync --no-tag --no-clone-bundle -j$(nproc --all) --optimized-fetch --prune
+repo sync -c -f --force-sync --no-tag --no-clone-bundle -j$(nproc --all) --optimized-fetch --prune --depth=1
 echo -e "\e[36mBuilding...\e[0m"
 # Use CCACHE
 export CCACHE_COMPRESS=1
