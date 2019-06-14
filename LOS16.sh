@@ -6,7 +6,7 @@ PATH=~/bin:$PATH
 cd ~/los16
 echo -e "\e[36mSyncing from source...\e[0m"
 # Optimized sync
-repo sync -c -f --force-sync --no-tags --no-clone-bundle -j$(nproc --all)
+repo sync -c --force-sync --no-tags --no-clone-bundle -j$(nproc --all) --optimized-fetch --prune
 echo -e "\e[36mBuilding...\e[0m"
 # Use CCACHE
 export CCACHE_COMPRESS=1

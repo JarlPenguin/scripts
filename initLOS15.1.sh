@@ -5,7 +5,7 @@ cd ~
 mkdir los15.1
 # Initialize
 cd los15.1
-repo init -u https://github.com/LineageOS/android.git -b lineage-15.1
+repo init -u https://github.com/LineageOS/android.git -b lineage-15.1 --depth="1"
 # Clone manifests and copy them to local manifests dir
 mkdir .repo/local_manifests
 cd ~
