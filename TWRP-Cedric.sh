@@ -1,5 +1,5 @@
 #!/bin/sh
-echo -e "\e[36mScript to automate TeamWin Recovery Project builds for Moto G5S (montana)"
+echo -e "\e[36mScript to automate TeamWin Recovery Project builds for Moto G5 (cedric)"
 echo -e "Initializing...\e[0m"
 # Add repo to PATH
 PATH=~/bin:$PATH
@@ -19,7 +19,7 @@ export ALLOW_MISSING_DEPENDENCIES=true
 # Setup build environment
 . build/envsetup.sh
 # Lunch the device
-lunch omni_montana-userdebug
+lunch omni_cedric-userdebug
 # Clean build directory
 make clean && make clobber
 # Start the build
