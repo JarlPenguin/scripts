@@ -1,4 +1,4 @@
-my_dir=./
+my_dir=$(pwd)
 # cd to home
 cd ~
 # Make ROM directory
