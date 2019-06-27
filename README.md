@@ -1,5 +1,9 @@
 # ROM/TWRP building scripts for Moto G5S
 
+initLOS14.1.sh - Initialize LineageOS 14.1
+
+LOS14.1.sh - Build script for LineageOS 14.1
+
 initLOS15.1.sh - Initialize LineageOS 15.1
 
 LOS15.1.sh - Build script for LineageOS 15.1
@@ -8,15 +12,21 @@ initLOS16.sh - Initialize LineageOS 16.0
 
 LOS16.sh - Build script for LineageOS 16.0
 
-LineageKernel.sh - Build script for Lineage Kernel with GCC
+initLineageKernel.sh - Initialize stock Lineage Kernel
 
-LineageKernelClang.sh - Build script for Lineage Kernel with Clang
+LineageKernel.sh - Build script for stock Lineage Kernel
 
-PE9CAF.sh - Build script for Pixel Experience 9.0 (CAF) (experimental)
+initPE9CAF.sh - Initialize Pixel Experience 9.0 (CAF)
 
-TWRP.sh - Build script for TWRP (included with OmniROM 9.0)
+PE9CAF.sh - Build script for Pixel Experience 9.0 (CAF)
 
-TWRP-Treble.sh - Build script for TWRP (Project Treble) (included with OmniROM 9.0)
+initTWRP.sh - Initialize montana TWRP
+
+TWRP.sh - Build script for montana TWRP
+
+initTWRP-Cedric.sh - Initialize cedric TWRP
+
+TWRP-Cedric.sh - Build script for cedric TWRP
 
 Replace sections with `<>` with your respective directory.
 
