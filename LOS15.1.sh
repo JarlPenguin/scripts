@@ -17,6 +17,7 @@ export USE_CCACHE=1
 . build/envsetup.sh
 # Start the build
 breakfast montana
+rm -rf $OUT/obj/PACKAGING/target_files_*
 mka target-files-package otatools
 croot
 ./build/tools/releasetools/sign_target_files_apks -o -d ~/.android-certs     $OUT/obj/PACKAGING/target_files_intermediates/*-target_files-*.zip     signed-target_files.zip && ./build/tools/releasetools/ota_from_target_files -k ~/.android-certs/releasekey     --block --backup=true     signed-target_files.zip     lineage-15.1-$(date +%Y%m%d)-UNOFFICIAL-montana-signed.zip
